@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="EntityFramework.Views.AddErrand"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EntityFramework.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid Grid.Column="0">
+                <Rectangle Fill="White"/>
+                <Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Rectangle Fill="White"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Grid.Row="0" Margin="15" >
+                                <TextBlock Text="Add Errand" FontSize="24" FontWeight="Bold" Width="200" />
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="0" Grid.Row="1" Margin="15">
+                                <TextBlock Text="Errand Title" />
+                                <TextBox x:Name="AddErrandTitle"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Grid.Row="1" Margin="15">
+                                <TextBlock Text="Errand Description" />
+                                <TextBox x:Name="AddErrandDescription"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="2" Margin="15">
+                                <TextBlock Text="Errand Status *Not started, Prossecing or Finnished*" />
+                                <TextBox x:Name="AddErrandStatus"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Grid.Row="2">
+                                <ComboBox Width="auto" Margin="17" x:Name="CBCustomer"/>
+                            </StackPanel>
+                            
+                            <Button x:Name="AddErrandBtn" Grid.Column="0" Grid.Row="3" Content="Add Errand" Margin="15" HorizontalAlignment="Stretch" Background="LightGray" FontWeight="Bold" Click="AddErrandBtn_Click"  />
+                            
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+
+            </Grid>
+            </Grid>
+            
+    </Grid>
+</UserControl>

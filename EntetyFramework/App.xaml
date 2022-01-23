@@ -1,0 +1,24 @@
+﻿<Application x:Class="EntetyFramework.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EntetyFramework"
+             xmlns:viewModel="clr-namespace:EntityFramework.Models.ViewModels"
+             xmlns:view="clr-namespace:EntityFramework.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewModel:CustomerViewModel}">
+                <view:Viewcustomers/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AddCustomerViewModel}">
+                <view:AddCustomer/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:AddErrandViewModel}">
+                <view:AddErrand/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:ErrandViewModel}">
+                <view:ViewErrand/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
